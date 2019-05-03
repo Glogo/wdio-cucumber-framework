@@ -10,7 +10,7 @@ import Hookrunner from './Hookrunner'
 import { EventEmitter } from 'events'
 
 import { executeHooksWithArgs } from '@wdio/config'
-import { executeSync, executeAsync, runFnInFiberContextWithCallback } from '@wdio/sync'
+import { executeSync, executeAsync, runFnInFiberContext } from '@wdio/sync'
 import { DEFAULT_OPTS } from './constants'
 
 class CucumberAdapter {
@@ -92,7 +92,8 @@ class CucumberAdapter {
 
     registerCompilers () {
         if (!this.cucumberOpts.compiler || this.cucumberOpts.compiler.length === 0) {
-            throw new Error('A compiler must be defined')
+            return;
+            // throw new Error('A compiler must be defined')
         }
 
         this.cucumberOpts.compiler.forEach(compiler => {
@@ -159,7 +160,7 @@ class CucumberAdapter {
      */
     wrapStepSync (code, retryTest = 0) {
         return function (...args) {
-            return new Promise((resolve, reject) => runFnInFiberContextWithCallback(
+            return new Promise((resolve, reject) => runFnInFiberContext(
                 executeSync.bind(this, code, retryTest, args),
                 (resultPromise) => resultPromise.then(resolve, reject)
             ).apply(this))
