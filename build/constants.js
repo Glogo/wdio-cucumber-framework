@@ -1,0 +1,53 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NOOP = exports.DEFAULT_OPTS = exports.DEFAULT_TIMEOUT = void 0;
+
+require("source-map-support/register");
+
+const DEFAULT_TIMEOUT = 60000;
+exports.DEFAULT_TIMEOUT = DEFAULT_TIMEOUT;
+const DEFAULT_OPTS = {
+  backtrace: false,
+  // <boolean> show full backtrace for errors
+  compiler: [],
+  // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+  failAmbiguousDefinitions: false,
+  // <boolean> treat ambiguous definitions as errors
+  failFast: false,
+  // <boolean> abort the run on first failure
+  ignoreUndefinedDefinitions: false,
+  // <boolean> treat undefined definitions as warnings
+  name: [],
+  // <REGEXP[]> only execute the scenarios with name matching the expression (repeatable)
+  profile: [],
+  // <string> (name) specify the profile to use
+  require: [],
+  // <string> (file/dir/glob) require files before executing features
+  order: 'defined',
+  // <string> switch between deterministic  and random feature execution. Either "defined", "random" or "random:42" whereas 42 is the seed for randomization
+  snippetSyntax: undefined,
+  // <string> specify a custom snippet syntax
+  snippets: true,
+  // <boolean> hide step definition snippets for pending steps
+  source: true,
+  // <boolean> hide source uris
+  strict: false,
+  // <boolean> fail if there are any undefined or pending steps
+  tagExpression: '',
+  // <string> (expression) only execute the features or scenarios with tags matching the expression
+  tagsInTitle: false,
+  // <boolean> add cucumber tags to feature or scenario name
+  timeout: DEFAULT_TIMEOUT // <number> timeout for step definitions in milliseconds
+
+};
+exports.DEFAULT_OPTS = DEFAULT_OPTS;
+
+const NOOP =
+/* istanbul ignore next */
+function () {};
+
+exports.NOOP = NOOP;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9jb25zdGFudHMuanMiXSwibmFtZXMiOlsiREVGQVVMVF9USU1FT1VUIiwiREVGQVVMVF9PUFRTIiwiYmFja3RyYWNlIiwiY29tcGlsZXIiLCJmYWlsQW1iaWd1b3VzRGVmaW5pdGlvbnMiLCJmYWlsRmFzdCIsImlnbm9yZVVuZGVmaW5lZERlZmluaXRpb25zIiwibmFtZSIsInByb2ZpbGUiLCJyZXF1aXJlIiwib3JkZXIiLCJzbmlwcGV0U3ludGF4IiwidW5kZWZpbmVkIiwic25pcHBldHMiLCJzb3VyY2UiLCJzdHJpY3QiLCJ0YWdFeHByZXNzaW9uIiwidGFnc0luVGl0bGUiLCJ0aW1lb3V0IiwiTk9PUCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQU8sTUFBTUEsZUFBZSxHQUFHLEtBQXhCOztBQUVBLE1BQU1DLFlBQVksR0FBRztBQUN4QkMsRUFBQUEsU0FBUyxFQUFFLEtBRGE7QUFDTjtBQUNsQkMsRUFBQUEsUUFBUSxFQUFFLEVBRmM7QUFFVjtBQUNkQyxFQUFBQSx3QkFBd0IsRUFBRSxLQUhGO0FBR1M7QUFDakNDLEVBQUFBLFFBQVEsRUFBRSxLQUpjO0FBSVA7QUFDakJDLEVBQUFBLDBCQUEwQixFQUFFLEtBTEo7QUFLVztBQUNuQ0MsRUFBQUEsSUFBSSxFQUFFLEVBTmtCO0FBTWQ7QUFDVkMsRUFBQUEsT0FBTyxFQUFFLEVBUGU7QUFPWDtBQUNiQyxFQUFBQSxPQUFPLEVBQUUsRUFSZTtBQVFYO0FBQ2JDLEVBQUFBLEtBQUssRUFBRSxTQVRpQjtBQVNOO0FBQ2xCQyxFQUFBQSxhQUFhLEVBQUVDLFNBVlM7QUFVRTtBQUMxQkMsRUFBQUEsUUFBUSxFQUFFLElBWGM7QUFXUjtBQUNoQkMsRUFBQUEsTUFBTSxFQUFFLElBWmdCO0FBWVY7QUFDZEMsRUFBQUEsTUFBTSxFQUFFLEtBYmdCO0FBYVQ7QUFDZkMsRUFBQUEsYUFBYSxFQUFFLEVBZFM7QUFjTDtBQUNuQkMsRUFBQUEsV0FBVyxFQUFFLEtBZlc7QUFlSjtBQUNwQkMsRUFBQUEsT0FBTyxFQUFFbEIsZUFoQmUsQ0FnQkM7O0FBaEJELENBQXJCOzs7QUFtQkEsTUFBTW1CLElBQUk7QUFBRztBQUEyQixZQUFZLENBQUUsQ0FBdEQiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgREVGQVVMVF9USU1FT1VUID0gNjAwMDBcblxuZXhwb3J0IGNvbnN0IERFRkFVTFRfT1BUUyA9IHtcbiAgICBiYWNrdHJhY2U6IGZhbHNlLCAvLyA8Ym9vbGVhbj4gc2hvdyBmdWxsIGJhY2t0cmFjZSBmb3IgZXJyb3JzXG4gICAgY29tcGlsZXI6IFtdLCAvLyA8c3RyaW5nW10+IChcImV4dGVuc2lvbjptb2R1bGVcIikgcmVxdWlyZSBmaWxlcyB3aXRoIHRoZSBnaXZlbiBFWFRFTlNJT04gYWZ0ZXIgcmVxdWlyaW5nIE1PRFVMRSAocmVwZWF0YWJsZSlcbiAgICBmYWlsQW1iaWd1b3VzRGVmaW5pdGlvbnM6IGZhbHNlLCAvLyA8Ym9vbGVhbj4gdHJlYXQgYW1iaWd1b3VzIGRlZmluaXRpb25zIGFzIGVycm9yc1xuICAgIGZhaWxGYXN0OiBmYWxzZSwgLy8gPGJvb2xlYW4+IGFib3J0IHRoZSBydW4gb24gZmlyc3QgZmFpbHVyZVxuICAgIGlnbm9yZVVuZGVmaW5lZERlZmluaXRpb25zOiBmYWxzZSwgLy8gPGJvb2xlYW4+IHRyZWF0IHVuZGVmaW5lZCBkZWZpbml0aW9ucyBhcyB3YXJuaW5nc1xuICAgIG5hbWU6IFtdLCAvLyA8UkVHRVhQW10+IG9ubHkgZXhlY3V0ZSB0aGUgc2NlbmFyaW9zIHdpdGggbmFtZSBtYXRjaGluZyB0aGUgZXhwcmVzc2lvbiAocmVwZWF0YWJsZSlcbiAgICBwcm9maWxlOiBbXSwgLy8gPHN0cmluZz4gKG5hbWUpIHNwZWNpZnkgdGhlIHByb2ZpbGUgdG8gdXNlXG4gICAgcmVxdWlyZTogW10sIC8vIDxzdHJpbmc+IChmaWxlL2Rpci9nbG9iKSByZXF1aXJlIGZpbGVzIGJlZm9yZSBleGVjdXRpbmcgZmVhdHVyZXNcbiAgICBvcmRlcjogJ2RlZmluZWQnLCAvLyA8c3RyaW5nPiBzd2l0Y2ggYmV0d2VlbiBkZXRlcm1pbmlzdGljICBhbmQgcmFuZG9tIGZlYXR1cmUgZXhlY3V0aW9uLiBFaXRoZXIgXCJkZWZpbmVkXCIsIFwicmFuZG9tXCIgb3IgXCJyYW5kb206NDJcIiB3aGVyZWFzIDQyIGlzIHRoZSBzZWVkIGZvciByYW5kb21pemF0aW9uXG4gICAgc25pcHBldFN5bnRheDogdW5kZWZpbmVkLCAvLyA8c3RyaW5nPiBzcGVjaWZ5IGEgY3VzdG9tIHNuaXBwZXQgc3ludGF4XG4gICAgc25pcHBldHM6IHRydWUsIC8vIDxib29sZWFuPiBoaWRlIHN0ZXAgZGVmaW5pdGlvbiBzbmlwcGV0cyBmb3IgcGVuZGluZyBzdGVwc1xuICAgIHNvdXJjZTogdHJ1ZSwgLy8gPGJvb2xlYW4+IGhpZGUgc291cmNlIHVyaXNcbiAgICBzdHJpY3Q6IGZhbHNlLCAvLyA8Ym9vbGVhbj4gZmFpbCBpZiB0aGVyZSBhcmUgYW55IHVuZGVmaW5lZCBvciBwZW5kaW5nIHN0ZXBzXG4gICAgdGFnRXhwcmVzc2lvbjogJycsIC8vIDxzdHJpbmc+IChleHByZXNzaW9uKSBvbmx5IGV4ZWN1dGUgdGhlIGZlYXR1cmVzIG9yIHNjZW5hcmlvcyB3aXRoIHRhZ3MgbWF0Y2hpbmcgdGhlIGV4cHJlc3Npb25cbiAgICB0YWdzSW5UaXRsZTogZmFsc2UsIC8vIDxib29sZWFuPiBhZGQgY3VjdW1iZXIgdGFncyB0byBmZWF0dXJlIG9yIHNjZW5hcmlvIG5hbWVcbiAgICB0aW1lb3V0OiBERUZBVUxUX1RJTUVPVVQgLy8gPG51bWJlcj4gdGltZW91dCBmb3Igc3RlcCBkZWZpbml0aW9ucyBpbiBtaWxsaXNlY29uZHNcbn1cblxuZXhwb3J0IGNvbnN0IE5PT1AgPSAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqLyBmdW5jdGlvbiAoKSB7fVxuIl19
