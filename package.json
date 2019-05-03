@@ -38,7 +38,8 @@
     "fibers": "^3.1.1",
     "glob": "^7.1.2",
     "is-glob": "^4.0.0",
-    "mockery": "~2.1.0"
+    "mockery": "~2.1.0",
+    "source-map-support": "^0.5.11"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -46,7 +47,6 @@
     "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
     "babel-plugin-source-map-support": "^2.0.1",
-    "source-map-support": "^0.5.11",
     "@babel/preset-env": "^7.4.2",
     "babel-core": "^7.0.0-bridge.0",
     "@babel/cli": "^7.2.3",
